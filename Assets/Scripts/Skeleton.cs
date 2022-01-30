@@ -11,10 +11,20 @@ namespace Assets.Scripts
     public class Skeleton : AControllableNPC
     {
 
+        private CommandLibrary commandLibrary;
+
         private void Start()
         {
+            //commandLibrary = new CommandLibrary();
+            //commandLibrary.CommandAdd(new MoveObjectCommand(gameObject));
             strategy = new SkeletonMovementStrategy(gameObject);
             rigidbody = GetComponent<Rigidbody2D>();
+        }
+
+        void FixedUpdate()
+        {
+            base.FixedUpdate();
+            //commandLibrary.InputCheck();
         }
 
         public override void ChangeState()
@@ -24,6 +34,7 @@ namespace Assets.Scripts
                 state = new LazyState();
                 ChangeStrategy(new SkeletonLazyStrategy());
                 tag = "EnemyUnit";
+                
             }
             else
             {

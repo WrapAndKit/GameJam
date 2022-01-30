@@ -12,6 +12,7 @@ namespace Assets.Scripts
     class Bat: AControllableNPC
     {
 
+
         private void Start()
         {
             strategy = new BatMovementStrategy(gameObject);
@@ -30,6 +31,15 @@ namespace Assets.Scripts
                 tag = "Player";
                 state = new ControlledState();
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>().playerObject = gameObject;
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if ((collision.gameObject.tag == "RealWorldItem") && state is ControlledState)
+            {
+                invader.GetComponent<PlayerController>().TakeKey();
+                Destroy(collision.gameObject);
             }
         }
     }

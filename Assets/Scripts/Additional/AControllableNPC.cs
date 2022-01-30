@@ -10,7 +10,6 @@ namespace Assets.Scripts.Additional
     public abstract class AControllableNPC: MonoBehaviour, IControllable
     {
         private Vector2 movement;
-        private float pressTime = 0f;
 
 
         protected internal IState state = new NormalState();
@@ -42,30 +41,23 @@ namespace Assets.Scripts.Additional
             if (state is ControlledState)
             {
                 rigidbody.MovePosition(rigidbody.position + movement * Time.fixedDeltaTime);
-                if (Input.GetKey(KeyCode.Space))
+                if (Input.GetKey(KeyCode.X))
                 {
-                    if (pressTime > timeToInvader)
-                    {
-                        ChangeState();
-                        invader.SetActive(true);
-                        invader.GetComponent<Rigidbody2D>().MovePosition(rigidbody.position);
-                        invader.GetComponent<PlayerController>().Show();
-                        pressTime = 0f;
-                    }
-                    else
-                    {
-                        pressTime += Time.fixedDeltaTime;
-                    }
-                }
-                if (Input.GetKeyUp(KeyCode.Space))
-                {
-                    pressTime = 0;
+                    ChangeState();
+                    InvaderActivation();
                 }
             }
             else
             {
                 strategy.Execute(Time.fixedDeltaTime);
             }
+        }
+
+        private void InvaderActivation()
+        {   
+            invader.GetComponent<Rigidbody2D>().MovePosition(gameObject.GetComponent<Rigidbody2D>().position - new Vector2(8f, 8f));
+            invader.SetActive(true);
+            invader.GetComponent<PlayerController>().Show();
         }
     }
 }

@@ -42,14 +42,16 @@ namespace Assets.Scripts.Additional
 
     public class SkeletonMovementStrategy: IStrategy
     {
+        private GameObject skeleton;
         private Rigidbody2D rb;
         private Collider2D coll;
         private float direction = 1.0f;
         public float speed = 1f;
         private LayerMask walls = LayerMask.GetMask("Walls");
 
-        public SkeletonMovementStrategy(GameObject skeleton)
+        public SkeletonMovementStrategy(GameObject _skeleton)
         {
+            skeleton = _skeleton;
             rb = skeleton.GetComponent<Rigidbody2D>();
             coll = skeleton.GetComponent<Collider2D>();
         }
@@ -66,8 +68,12 @@ namespace Assets.Scripts.Additional
             {
                 times += 1;
             }
-            Vector2 move = rb.position;
+            Vector2 move = rb.position;            
             move.x += direction * speed * deltaTime;
+            if (direction == -1f)
+            {
+                skeleton.GetComponent<Animator>().
+            }
             rb.MovePosition(move);
         }
     }

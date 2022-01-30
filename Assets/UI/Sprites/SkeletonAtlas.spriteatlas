@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SkeletonAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: -3007195386540811747, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: 3947113552620326751, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: -4140815759423248033, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: -6159526116734709470, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: -548272931905632344, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: -8241870860776778026, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: 1504846572855536530, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: 4097182635173194414, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: -863250475399638088, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: 7398357600383469560, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: -4088570823428745117, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: 3916559401818879359, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: -5590122429825059556, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: 197238882163348708, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: 6302765140411396300, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: 2311997136748926086, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: -9208278432047654326, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    - {fileID: -8288829916393392846, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 7398357600383469560, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: -863250475399638088, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: 4097182635173194414, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: 1504846572855536530, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: -8241870860776778026, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: -548272931905632344, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: -6159526116734709470, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: -4140815759423248033, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: 3947113552620326751, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: -3007195386540811747, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: -5590122429825059556, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: 197238882163348708, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: -4088570823428745117, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: 3916559401818879359, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: -9208278432047654326, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: -8288829916393392846, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: 6302765140411396300, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  - {fileID: 2311997136748926086, guid: e0b73eb78b6bd464cab2e9bd33248f86, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Skeleon_sprite (1)_9
+  - Skeleon_sprite (1)_8
+  - Skeleon_sprite (1)_7
+  - Skeleon_sprite (1)_6
+  - Skeleon_sprite (1)_5
+  - Skeleon_sprite (1)_4
+  - Skeleon_sprite (1)_3
+  - Skeleon_sprite (1)_2
+  - Skeleon_sprite (1)_1
+  - Skeleon_sprite (1)_0
+  - Skeleon_sprite (1)_12
+  - Skeleon_sprite (1)_13
+  - Skeleon_sprite (1)_10
+  - Skeleon_sprite (1)_11
+  - Skeleon_sprite (1)_16
+  - Skeleon_sprite (1)_17
+  - Skeleon_sprite (1)_14
+  - Skeleon_sprite (1)_15
+  m_RenderDataMap: {}
+  m_Tag: SkeletonAtlas
+  m_IsVariant: 0

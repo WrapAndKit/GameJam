@@ -10,13 +10,9 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rigidbody;
     public int crystalCount = 0;
+    private bool key = false;
     private Vector2 moveV;
-    private Collider2D coll;
 
-    [SerializeField]
-    private LayerMask walls;
-
-    private float fallTime = 0f;
     // Start is called before the first frame update
 
 
@@ -25,17 +21,16 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        coll = GetComponent<Collider2D>();
         realObjects = GameObject.FindGameObjectsWithTag("RealWorldItem");
         ghostObjects = GameObject.FindGameObjectsWithTag("GhostWorldItem");
 
         foreach (var obj in realObjects)
         {
-            obj.SetActive(false);
+            obj?.SetActive(false);
         }
         foreach (var obj in ghostObjects)
         {
-            obj.SetActive(true);
+            obj?.SetActive(true);
         }
     }
 
@@ -43,6 +38,7 @@ public class PlayerController : MonoBehaviour
     {
         if (gameObject.active)
         {
+
             Vector2 moveInput = new Vector2(
                 Input.GetAxisRaw("Horizontal"),
                 Input.GetAxisRaw("Vertical"));
@@ -60,6 +56,11 @@ public class PlayerController : MonoBehaviour
         }
     }
     
+    public void TakeKey()
+    {
+        key = true;
+    }
+
     public void Show()
     {
         gameObject.tag = "Player";
@@ -67,11 +68,11 @@ public class PlayerController : MonoBehaviour
 
         foreach (var obj in realObjects)
         {
-            obj.SetActive(false);
+            obj?.SetActive(false);
         }        
         foreach (var obj in ghostObjects)
         {
-            obj.SetActive(true);
+            obj?.SetActive(true);
         }
     }
 
@@ -92,32 +93,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Z))
         {
-            if (fallTime > 0.4f && rigidbody.IsSleeping())
-            {
-                rigidbody.WakeUp();
 
-                collision.gameObject.GetComponent<AControllableNPC>().SetInvader(gameObject);
-                collision.gameObject.GetComponent<AControllableNPC>().ChangeState();
-                Hide();
-                fallTime = 0f;
-            }
-            else
-            {
-                rigidbody.Sleep();
-                fallTime += Time.fixedDeltaTime;
-            }
-
-            //Destroy(gameObject);
+            collision.gameObject.GetComponentInParent<AControllableNPC>().SetInvader(gameObject);
+            collision.gameObject.GetComponentInParent<AControllableNPC>().ChangeState();
+            Hide();
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "EnemyUnit")
-            Physics2D.IgnoreCollision(collision.collider, collision.otherCollider);
-        else if (collision.gameObject.tag == "GhostWorldItem")
+
+        if (collision.gameObject.tag == "GhostWorldItem")
         {
             crystalCount++;
             DestroyGhostItem(collision.gameObject);

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7462158800639805463}
   - component: {fileID: 7462158800639805462}
   - component: {fileID: 7462158800639805465}
+  - component: {fileID: 3924757669665038066}
   m_Layer: 8
   m_Name: PlayerTile
   m_TagString: Player
@@ -145,8 +146,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  rigidbody: {fileID: 0}
+  rigidbody: {fileID: 7462158800639805463}
   crystalCount: 0
-  walls:
-    serializedVersion: 2
-    m_Bits: 0
+--- !u!95 &3924757669665038066
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7462158800639805466}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
