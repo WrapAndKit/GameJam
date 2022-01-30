@@ -70,10 +70,7 @@ namespace Assets.Scripts.Additional
             }
             Vector2 move = rb.position;            
             move.x += direction * speed * deltaTime;
-            if (direction == -1f)
-            {
-                skeleton.GetComponent<Animator>().
-            }
+            
             rb.MovePosition(move);
         }
     }

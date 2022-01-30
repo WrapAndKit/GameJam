@@ -54,9 +54,9 @@ namespace Assets.Scripts.Additional
         }
 
         private void InvaderActivation()
-        {   
-            invader.GetComponent<Rigidbody2D>().MovePosition(gameObject.GetComponent<Rigidbody2D>().position - new Vector2(8f, 8f));
+        {
             invader.SetActive(true);
+            invader.GetComponent<Rigidbody2D>().position = gameObject.GetComponent<Rigidbody2D>().position;
             invader.GetComponent<PlayerController>().Show();
         }
     }

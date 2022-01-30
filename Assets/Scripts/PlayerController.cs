@@ -26,11 +26,13 @@ public class PlayerController : MonoBehaviour
 
         foreach (var obj in realObjects)
         {
-            obj?.SetActive(false);
+            if (obj != null)
+                obj?.SetActive(false);
         }
         foreach (var obj in ghostObjects)
         {
-            obj?.SetActive(true);
+            if (obj != null)
+                obj?.SetActive(true);
         }
     }
 
@@ -68,11 +70,13 @@ public class PlayerController : MonoBehaviour
 
         foreach (var obj in realObjects)
         {
-            obj?.SetActive(false);
+            if (obj != null)
+                obj?.SetActive(false);
         }        
         foreach (var obj in ghostObjects)
         {
-            obj?.SetActive(true);
+            if (obj != null)
+                obj?.SetActive(true);
         }
     }
 
@@ -83,11 +87,13 @@ public class PlayerController : MonoBehaviour
 
         foreach (var obj in realObjects)
         {
-            obj?.SetActive(true);
+            if (obj != null)
+                obj?.SetActive(true);
         }
         foreach (var obj in ghostObjects)
         {
-            obj?.SetActive(false);
+            if (obj != null)
+                obj?.SetActive(false);
         }
     }
 

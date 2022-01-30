@@ -34,10 +34,16 @@ namespace Assets.Scripts
                 state = new LazyState();
                 ChangeStrategy(new SkeletonLazyStrategy());
                 tag = "EnemyUnit";
-                
+                gameObject.GetComponent<Animator>().Play("DeathSkeleton");
             }
             else
             {
+                if (state is LazyState)
+                {
+                    gameObject.GetComponent<Animator>().Play("AliveSkeleton");
+                    gameObject.GetComponent<Animator>().Play("IdleDownSkeleton");
+
+                }   
                 tag = "Player";
                 state = new ControlledState();
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>().playerObject = gameObject;
